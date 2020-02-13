@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background: $dark;
+  font-family: $body-font;
+  padding-top: ($navbar-height + 20px);
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 50px;
+  font-family: $headers-font;
+  font-weight: bold;
+}

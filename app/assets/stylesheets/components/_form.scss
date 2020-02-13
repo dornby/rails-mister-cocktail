@@ -1,0 +1,52 @@
+.form {
+  margin-top: 50px;
+}
+
+.select2-results__option {
+  color: $dark;
+}
+
+.form-input {
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.inline-input {
+  margin-top: 0;
+}
+
+.form-submit {
+  height: 50px;
+  background-color: $tangerine;
+  color: $white;
+  width: calc(30% - 50px);
+  margin-top: 50px;
+}
+
+.inline-submit {
+  margin-top: 0;
+  margin-left: 50px;
+}
+
+.form-group {
+  width: 70%;
+  margin: 0
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.select2-container {
+  height: 50px;
+}
+
+.select2 {
+  height: 50px;
+}

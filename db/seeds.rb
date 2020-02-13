@@ -11,3 +11,13 @@ ingredients['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient['strIngredient1'])
 end
 
+Cocktail.create(name: 'Cosmopolitan')
+Cocktail.create(name: 'Mojito')
+Cocktail.create(name: 'Mai Tai')
+Cocktail.create(name: 'Mint Julep')
+Cocktail.create(name: 'Caipirinha')
+Cocktail.create(name: 'Margarita')
+Cocktail.create(name: 'Piña Colada')
+Cocktail.create(name: 'Californication')
+Cocktail.create(name: 'Long Island')
+Cocktail.create(name: 'Apple Martini')

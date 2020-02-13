@@ -1,6 +1,18 @@
+$navbar-height: 75px;
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: transparent;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: $white;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-tang {
+  background: rgba(251,159,137,0.8);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +21,14 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon > h1 > .logo {
+  text-decoration: none;
+  color: $white;
+}
+
+.navbar-lewagon > h1 {
+  margin-top: 0;
+  color: $white;
 }
