@@ -68,3 +68,9 @@
 input .photo-input {
   border-radius: 2px;
 }
+
+@media (max-width: 768px) {
+  .form-submit {
+    width: 30%;
+  }
+}
