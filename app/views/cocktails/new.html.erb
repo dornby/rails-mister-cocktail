@@ -1,12 +1,13 @@
-<h1>Create a new cocktail</h1>
-
 <div class="container">
-  <div class="form">
-    <%= simple_form_for(@cocktail) do |f| %>
-      <%= f.input :rollout_id, :label => false, wrapper_html: {class: "form-inline"} do %>
-        <%= f.input :name, placeholder: "Name", label: false, input_html: { class: 'form-input inline-input' } %>
-        <%= f.button :submit, class: "form-submit inline-submit" %>
+  <div class="padding-blank"></div>
+  <h1>Create a new cocktail</h1>
+  <div class="container">
+    <div class="form">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.input :name, placeholder: "Name", label: false, input_html: { class: 'form-input' } %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: "form-submit" %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
