@@ -3,7 +3,7 @@
 # Comment
 class CocktailsController < ApplicationController
   def index
-    @cocktails = params[:query] ? Cocktail.all.where("lower(name) like '%#{params[:query]}%'") : Cocktail.all
+    @cocktails = params[:query] ? Cocktail.all.where("lower(name) like '%#{params[:query].downcase}%'") : Cocktail.all
   end
 
   def show
