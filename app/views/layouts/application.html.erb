@@ -13,10 +13,12 @@
 
   <body>
     <div class="navbar-lewagon fixed-top">
-      <h1>
-        <i class="fas fa-cocktail"></i>
-        <%= link_to "Mister Cocktail", root_path, class: "logo" %>
-      </h1>
+      <%= link_to image_tag('logo', style: "width: 300px;"), root_path %>
+      <div class="search">
+        <form action="<%= root_path %>">
+          <input type="text" name="query" class="search-bar"><button type="submit" class="search-submit" value="search"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
       <%= link_to "Add a Cocktail", new_cocktail_path, class: "btn btn-primary" %>
     </div>
     <%= yield %>

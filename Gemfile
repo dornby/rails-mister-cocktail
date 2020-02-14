@@ -52,3 +52,5 @@ gem 'simple_form'
 gem 'pry-byebug'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
+gem 'active_storage_validations'
+

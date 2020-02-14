@@ -3,5 +3,25 @@
   padding: 30px;
   border: 1px solid $white;
   border-radius: 8px;
-  width: 60%
+  width: 75%;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.fa-times-circle {
+  color: $white;
+  font-size: 14px;
+}
+
+.ingredients-list > ol > li {
+  margin-bottom: 10px;
+}
+
+.ingredients-list > ol > li > a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
