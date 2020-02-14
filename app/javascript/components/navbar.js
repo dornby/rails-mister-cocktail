@@ -5,7 +5,7 @@ const initUpdateNavbarOnScroll = () => {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= 20 && window.location.pathname === '/') {
         navbar.classList.add('navbar-lewagon-tang');
-      } else if (window.scrollY >= 350 && path.test(window.location.pathname)) {
+      } else if (window.scrollY >= 500 && path.test(window.location.pathname)) {
         navbar.classList.add('navbar-lewagon-tang');
       } else {
         navbar.classList.remove('navbar-lewagon-tang');
