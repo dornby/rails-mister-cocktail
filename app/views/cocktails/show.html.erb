@@ -1,21 +1,27 @@
-<h1>The recipe to a <font color="#FB9F89"><%= @cocktail.name %></font></h1>
+<div class="banner" style='height: 350px; background-image: url(<%= image_path "cocktail_#{@cocktail.id}.jpg" %>); background-size: cover; background-position: center;'></div>
+<div class="container">
+  <% if !@cocktail.doses.empty? %>
+    <div class="ingredients-list">
+      <h1>The recipe to a <font color="#FB9F89"><%= @cocktail.name %></font></h1>
+      <ul>
+      <% @cocktail.doses.each do |dose| %>
+      <li><%= "#{dose.description} of #{dose.ingredient.name} • "%><%= link_to dose_path(dose), method: :delete  do %>
+        <i class="fas fa-trash"></i>
+      <% end %>
+      </li>
+      <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <h1>This cocktail as no recipe yet...</h1>
+  <% end %>
 
-<div class="ingredients-list">
-  <ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= "#{dose.description} of #{dose.ingredient.name} • "%><%= link_to dose_path(dose), method: :delete  do %>
-    <i class="fas fa-trash"></i>
-  <% end %>
-  </li>
-  <% end %>
-  </ul>
-</div>
-
-<h3>Add a new ingredient:</h3>
-<div class="form">
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description, placeholder: "Description", label: false, input_html: { class: 'form-input' } %>
-    <%= f.association :ingredient, label: false, prompt: 'Select Ingredient', input_html: { class: 'form-input' } %>
-    <%= f.button :submit, class: "form-submit" %>
-  <% end %>
+  <h3>Add a new ingredient:</h3>
+  <div class="form">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, placeholder: "Description", label: false, input_html: { class: 'form-input' } %>
+      <%= f.association :ingredient, label: false, prompt: 'Select Ingredient', input_html: { class: 'form-input' } %>
+      <%= f.button :submit, class: "form-submit" %>
+    <% end %>
+  </div>
 </div>

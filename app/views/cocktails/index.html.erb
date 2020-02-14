@@ -1,7 +1,10 @@
-<div class="row">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card-container col-lg-3 col-md-4 col-sm-6">
-        <%= link_to cocktail.name, cocktail_path(cocktail), {class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#{image_path "cocktail_#{cocktail.id}.jpg"}); background-size: cover;"}  %>
+<div class="container">
+  <div class="padding-blank"></div>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card-container col-lg-3 col-md-4 col-sm-6">
+            <%= link_to cocktail.name, cocktail_path(cocktail), {class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#{image_path "cocktail_#{cocktail.id}.jpg"}); background-size: cover;"}  %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
 </div>
